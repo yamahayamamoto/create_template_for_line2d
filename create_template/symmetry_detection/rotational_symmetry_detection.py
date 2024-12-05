@@ -721,7 +721,7 @@ def refine_rotational_axis(P, axis_vector, relative_fitness=1e-6, relative_rmse=
         estimation_method=est_method,
         criteria=criteria
     )
-    print(reg_p2p)
+    #print(reg_p2p)
     inlier_rmse = reg_p2p.inlier_rmse
     rot=reg_p2p.transformation[:3,:3]
     refine_axis = np.dot(rot, axis_vector)
@@ -937,19 +937,19 @@ if __name__ =="__main__":
             symmetric_angles_div = np.array(360 / symmetric_angles) 
             symmetric_angles_div = np.round([round(div) for div in symmetric_angles_div])
             
-            print("symmetric_angles(round)",symmetric_angles)
-            print("symmetric_angles_div",symmetric_angles_div)
+            #print("symmetric_angles(round)",symmetric_angles)
+            #print("symmetric_angles_div",symmetric_angles_div)
 
             diff_angles_bw_ideal = np.array([(360-ang*(div))/div for ang,div in zip(symmetric_angles,symmetric_angles_div)])
             diff_angles_bw_ideal = diff_angles_bw_ideal
-            print("diff_angles_bw_ideal",diff_angles_bw_ideal)
+            #print("diff_angles_bw_ideal",diff_angles_bw_ideal)
             diff_angles_bw_ideal_abs = np.array([np.abs(diff) for diff in diff_angles_bw_ideal])
           
 
-            print("diff_angles_bw_ideal_abs",diff_angles_bw_ideal_abs)
+            #print("diff_angles_bw_ideal_abs",diff_angles_bw_ideal_abs)
             # delta_angleが3以下のインデックスを取得
             indices = np.where(diff_angles_bw_ideal_abs <= 5)[0]
-            print("indices",indices)
+            #print("indices",indices)
 
             if(len(indices)==1):
                 # 180degのとき
@@ -958,7 +958,7 @@ if __name__ =="__main__":
                 symmetric_score = symmetric_scores[index]
                 
             elif(len(indices)>=2):
-                print("indices",indices)
+                #print("indices",indices)
 
                 # 最小値のインデックスを取得
                 # min_index = np.argmin(symmetric_angles[indices])

@@ -5,7 +5,7 @@ import os
 
 
 """
-python create_sphere_viewpoints.py
+python create_sphere_viewpoints.py　--viewpoint_num 364 --output_dir ../dataset/input/viewpoints --debug
 """
 
 def generate_shpere_surface_points_by_fib(N):

@@ -100,7 +100,7 @@ def process_mesh(*, mesh_file, input_dir, output_dir, use_grasp_pose=False, is_s
     viewpoints_dir                                = os.path.join(result_dir, "viewpoints")
     restricted_viewpoint_dir_by_rotation_symmetry = os.path.join(viewpoints_dir, "restricted_rotation_symmetry")
     restricted_viewpoint_dir_by_grasp_pose   = os.path.join(viewpoints_dir, "restricted_grasp_pose")
-    raw_viewpoint_path                            = os.path.join(viewpoints_dir, "origin_viewpoints.npy")
+    raw_viewpoint_path                            = os.path.join(input_dir, "viewpoints", "origin_viewpoints.npy")
     restricted_viewpoint_dir_by_perspected_area    = os.path.join(viewpoints_dir, "restricted_perspected_area")
 
     rendered_image_dir                         = os.path.join(output_dir, "rendered_image")
