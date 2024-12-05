@@ -1,0 +1,13 @@
+#
+# Wavefront material file
+# Created in RealityCapture
+# Engine version v1.4.0.117414
+#
+
+newmtl ArcanaMfg_20240423_105048_u1_v1
+Ka 1 1 1
+Kd 1 1 1
+d 1
+Ns 0
+illum 1
+map_Kd ao.png
